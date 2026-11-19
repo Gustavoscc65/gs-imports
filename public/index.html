@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101010">
+  <title>GS Imports | Tênis e vestuário</title>
+  <meta name="description" content="Tênis e camisetas na GS Imports. Confira os destaques e compre com checkout PagBank.">
+  <link rel="icon" href="/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="topline">ENVIO PARA TODO O BRASIL • PAGAMENTO SEGURO PELO PAGBANK</div>
+  <header class="header">
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰</button>
+    <a href="#" class="brand"><img src="/logo.svg" alt="GS Imports"></a>
+    <nav id="nav"><a href="#tenis">Tênis</a><a href="#camisetas">Camisetas</a><a href="#sobre">Sobre a GS</a></nav>
+    <button class="cart-trigger" id="openCart" aria-label="Abrir carrinho">Sacola <span id="cartCount">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">GS IMPORTS • DROP 2026</span>
+        <h1>Seu estilo.<br><em>Suas escolhas.</em></h1>
+        <p>Modelos selecionados de tênis e vestuário para acompanhar sua rotina.</p>
+        <a class="gold-btn" href="#tenis">Explorar coleção <span>↗</span></a>
+      </div>
+      <div class="hero-art">
+        <div class="hero-circle"></div>
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1000&q=85" alt="Tênis esportivo vermelho" class="hero-shoe">
+        <div class="hero-stamp">GS<br><small>IMPORTS</small></div>
+      </div>
+      <div class="hero-bottom"><span>01 / 02</span><span>URBAN • SPORT • CASUAL</span></div>
+    </section>
+
+    <section class="benefits">
+      <div><b>✦</b><span>Compra segura</span></div><div><b>↗</b><span>Novidades frequentes</span></div><div><b>◎</b><span>Atendimento online</span></div>
+    </section>
+
+    <section class="catalog" id="tenis">
+      <div class="section-head"><div><span class="eyebrow">SELEÇÃO GS</span><h2>Em destaque</h2></div><span class="section-note">Tênis & lifestyle</span></div>
+      <div class="filters" id="filters">
+        <button class="filter active" data-filter="all">Todos</button><button class="filter" data-filter="tenis">Tênis</button><button class="filter" data-filter="camisetas">Camisetas</button>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="banner">
+      <div><span class="eyebrow">GS IMPORTS</span><h2>Detalhes que<br><em>fazem diferença.</em></h2><p>Encontre o próximo item da sua coleção.</p></div>
+      <div class="banner-mark">GS<span>.</span></div>
+    </section>
+
+    <section class="catalog" id="camisetas">
+      <div class="section-head"><div><span class="eyebrow">PARA ANDAR SEMPRE NA MODA</span><h2>Vestuário</h2></div><span class="section-note">Camisetas</span></div>
+      <div class="product-grid" id="shirtGrid"></div>
+    </section>
+
+    <section class="about" id="sobre"><span class="eyebrow">QUEM SOMOS</span><h2>Bem-vindo à <em>GS Imports.</em></h2><p>Uma vitrine online de tênis e vestuário, com navegação simples, atendimento próximo e pagamento processado em ambiente seguro PagBank.</p></section>
+  </main>
+
+  <footer><img src="/logo.svg" alt="GS Imports"><span>© 2026 GS Imports. Todos os direitos reservados.</span><span>Pagamentos processados pelo PagBank.</span></footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart" id="cartPanel" aria-label="Carrinho de compras">
+    <div class="cart-head"><h2>Sua sacola</h2><button id="closeCart" aria-label="Fechar">×</button></div>
+    <div class="cart-items" id="cartItems"><p class="empty">Sua sacola está vazia.</p></div>
+    <div class="cart-foot"><div class="total"><span>Subtotal</span><strong id="cartTotal">R$ 0,00</strong></div><button class="gold-btn checkout-btn" id="checkoutBtn">Finalizar compra <span>↗</span></button><small>O pagamento será concluído no ambiente seguro PagBank.</small></div>
+  </aside>
+
+  <div class="modal" id="buyerModal">
+    <div class="modal-card">
+      <button class="modal-close" id="closeBuyer">×</button>
+      <span class="eyebrow">QUASE LÁ</span><h2>Dados para o pedido</h2>
+      <p>Informe seus dados de contato. O pagamento será feito no checkout seguro do PagBank.</p>
+      <form id="buyerForm">
+        <label>Nome completo<input name="name" autocomplete="name" required></label>
+        <label>E-mail<input name="email" type="email" autocomplete="email" required></label>
+        <label>Telefone / WhatsApp<input name="phone" type="tel" autocomplete="tel" required></label>
+        <button class="gold-btn" type="submit">Ir para pagamento <span>↗</span></button>
+      </form>
+      <small class="secure-note">Não informe dados de cartão nesta loja. O PagBank processa o pagamento.</small>
+    </div>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
